@@ -10,13 +10,13 @@ import {
 const initialState = {
   1: {
     id: 1,
-    title: 'wash car',
+    title: 'NOT FETCHING FROM SERVER',
     body: 'with soap',
     done: false
   },
   2: {
     id: 2,
-    title: 'wash dog',
+    title: 'FIX IT DUDE',
     body: 'with shampoo',
     done: true
   }

@@ -31,7 +31,7 @@ class TodoForm extends React.Component {
     });
   }
 
-  uniqueId() {
+  uniqueId() { // refactor to APIUtils ¯\_(ツ)_/¯
     return new Date().getTime();
   }
 

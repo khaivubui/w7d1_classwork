@@ -4,7 +4,9 @@ import allTodos from '../../reducers/selectors.js';
 import {
   receiveTodo,
   removeTodo,
-  updateTodo
+  updateTodo,
+  fetchTodos,
+  createTodo
   } from '../../actions/todo_actions.js';
 
 
@@ -16,7 +18,8 @@ const mapDispatchToProps = (dispatch) => ({
   // receiveTodo(todo) {dispatch(receiveTodo(todo)); }
   receiveTodo: (todo) => dispatch(receiveTodo(todo)),
   removeTodo: (todo) => dispatch(removeTodo(todo)),
-  updateTodo: (todo) => dispatch(updateTodo(todo))
+  updateTodo: (todo) => dispatch(updateTodo(todo)),
+  fetchTodos: () => dispatch(fetchTodos)
 });
 
 const TodoListContainer = connect(
