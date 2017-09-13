@@ -6,19 +6,22 @@ import {
   removeTodo,
   updateTodo,
   fetchTodos,
-  createTodo
+  createTodo,
+  patchTodo,
+  deleteTodo
   } from '../../actions/todo_actions.js';
 
 
 const mapStateToProps = (state) => ({
-  todos: allTodos(state)
+  todos: allTodos(state),
+  errors: state.errors
 });
 
 const mapDispatchToProps = (dispatch) => ({
   // receiveTodo(todo) {dispatch(receiveTodo(todo)); }
-  receiveTodo: (todo) => dispatch(receiveTodo(todo)),
-  removeTodo: (todo) => dispatch(removeTodo(todo)),
-  updateTodo: (todo) => dispatch(updateTodo(todo)),
+  receiveTodo: (todo) => dispatch(createTodo(todo)),
+  removeTodo: (todo) => dispatch(deleteTodo(todo)),
+  updateTodo: (todo) => dispatch(patchTodo(todo)),
   fetchTodos: () => dispatch(fetchTodos)
 });
 

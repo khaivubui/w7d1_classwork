@@ -14,6 +14,28 @@
  *= require_self
  */
 
+body {
+  width: 500px;
+}
+
 * {
+  font-size: 20px;
   font-family: sans-serif;
+}
+
+
+button, input[type=submit] {
+  font-weight: 100;
+  color: white;
+  background: #34dd14;
+  border: 0;
+  padding: 5px 15px;
+  margin: 5px;
+  border-radius: 15px;
+  outline: 0;
+  transition: background-color 1s;
+}
+
+button:hover, input[type=submit]:hover {
+  background: #7cf166;
 }
